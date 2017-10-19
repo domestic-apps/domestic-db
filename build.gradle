@@ -1,0 +1,15 @@
+buildscript {
+    dependencies {
+        classpath 'org.mariadb.jdbc:mariadb-java-client:2.1.2'
+    }
+}
+
+plugins {
+    id "org.flywaydb.flyway" version "4.2.0"
+}
+
+flyway {
+    url = 'jdbc:mariadb://localhost:3306/domestic'
+    user = 'builder'
+    password = mysqlPassword
+}
